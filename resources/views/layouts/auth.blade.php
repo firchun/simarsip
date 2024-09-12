@@ -22,9 +22,22 @@
 
     <!-- Favicon -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
+    <style>
+        body {
+            background-image: url('{{ asset('img/bg.jpg') }}');
+            background-size: cover;
+            /* Menyebarkan gambar agar menutupi seluruh area */
+            background-position: center;
+            /* Menempatkan gambar di tengah */
+            background-repeat: no-repeat;
+            /* Mencegah pengulangan gambar */
+            min-height: 100vh;
+            /* Pastikan body setidaknya setinggi viewport */
+        }
+    </style>
 </head>
 
-<body class="bg-gradient-primary min-vh-100 d-flex justify-content-center align-items-center">
+<body class=" min-vh-100 d-flex justify-content-center align-items-center">
 
     @yield('main-content')
 
