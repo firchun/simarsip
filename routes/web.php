@@ -14,14 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Auth::routes(['verify' => false, 'reset' => false, 'register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 //pegawai
 Route::get('/pegawai', 'PegawaiController@index')->name('pegawai');
 Route::post('/pegawai/store', 'PegawaiController@store')->name('pegawai.store');
